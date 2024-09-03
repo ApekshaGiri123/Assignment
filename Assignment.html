@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIME Magazine Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        /* Header Styling */
+        .header {
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #ffffff;
+            border-bottom: 1px solid #ddd;
+        }
+        .header .menu-icon {
+            font-size: 18px;
+            margin-right: 15px;
+        }
+        .header img {
+            height: 30px;
+            margin-right: auto;
+        }
+        .header .search-bar {
+            margin-left: 1155px;
+            padding: 5px 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        /* Main Container */
+        .container {
+            display: flex;
+            /* padding: 20px; */
+        }
+        /* Left Vertical Bar */
+        .subscribe-bar {
+            width: 8px;
+            background-color: #d71e00;
+            color: #fff;
+            font-size: 14px;
+            text-align: center;
+            writing-mode: vertical-lr;
+            text-orientation: mixed;
+            padding: 10px;
+            font-weight: bold;
+            margin-right: 20px;
+        }
+        /* Featured Voices Section */
+        .featured-voices {
+            flex: 1;
+            padding-right: 20px;
+        }
+        .featured-voices h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .voices-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        .voice-item {
+            width: calc(50% - 15px);
+        }
+        .voice-item a {
+            color: #d71e00;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 18px;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .voice-item p {
+            margin: 0;
+            font-size: 16px;
+            color: #333;
+        }
+        /* Latest Stories Section */
+        .latest-stories {
+            width: 300px;
+            background-color: #ffef00;
+            padding: 20px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+        }
+        .latest-stories h3 {
+            margin: 0 0 20px 0;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .story-item {
+            margin-bottom: 15px;
+        }
+        .story-item a {
+            text-decoration: none;
+            color: #000;
+            font-size: 16px;
+            font-weight: bold;
+            display: block;
+        }
+        .story-item span {
+            display: block;
+            font-size: 14px;
+            color: #555;
+        }
+        .logo{
+            color:"green";
+        }
+        .logo-text{
+            font-size: 30px;  
+            color: #d71e00;
+            font-weight: bold;
+            text-decoration: none;
+            
+        }
+        .menu-icon{
+            color: #000;
+            text-decoration: none;
+            size: 25px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header Section -->
+<div class="header">
+    <a href="#" class="menu-icon">☰</span>
+    <div class="logo">
+        <a class="logo-text"href="https://time.com/6142852/moderna-booster-wanes-omicron/">Time</a>
+       
+    </div>
+    <input class="search-bar" type="text" placeholder="Search...">
+    <img src="data:image/png;base64,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" alt="Time Logo">
+</div>
+
+<!-- Main Content Section -->
+<div class="container">
+    <!-- Left Sidebar -->
+    <div class="subscribe-bar">
+        SUBSCRIBE AND SAVE 85%
+    </div>
+
+    <!-- Featured Voices Section -->
+    <div class="featured-voices">
+        <h2>FEATURED VOICES</h2>
+        <div class="voices-list">
+            <div class="voice-item">
+                <a href="#">Anatol Lieven</a>
+                <p>Russia Has Been Warning the West About Ukraine for Decades</p>
+            </div>
+            <div class="voice-item">
+                <a href="#">Ismat Ara</a>
+                <p>How It Feels to Be a Muslim Woman Sold by India's Right Wing</p>
+            </div>
+            <div class="voice-item">
+                <a href="#">Robert J. Davis</a>
+                <p>Why You Shouldn't Exercise to Lose Weight</p>
+            </div>
+            <div class="voice-item">
+                <a href="#">Yohanca Delgado</a>
+                <p>The Life-Changing Practice That Will Help You Feel More Gratitude</p>
+            </div>
+            <div class="voice-item">
+                <a href="#">W. Kamau Bell</a>
+                <p>There’s So Much More To Say About Bill Cosby</p>
+            </div>
+            <div class="voice-item">
+                <a href="#">Christina Bu</a>
+                <p>What Norway Can Teach the World About Switching to Electric Vehicles</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Right Sidebar (Latest Stories) -->
+    <div class="latest-stories">
+        <h3>LATEST STORIES</h3>
+        <div class="story-item">
+            <a href="https://time.com/6142934/amy-schneider-jeopardy-streak-ends/">Amy Schneider’s Jeopardy! Streak Ends</a>
+            <span>January 26, 2022 • 11:43 PM EST</span>
+        </div>
+        <div class="story-item">
+            <a href="https://time.com/6142628/writing-with-fire-india-documentary/">'Writing With Fire' Shines a Light on All-Women News Outlet</a>
+            <span>January 26, 2022 • 9:00 PM EST</span>
+        </div>
+        <div class="story-item">
+            <a href="https://time.com/6142852/moderna-booster-wanes-omicron/">Moderna Booster May Wane After 6 Months</a>
+            <span>January 26, 2022 • 5:51 PM EST</span>
+        </div>
+        <div class="story-item">
+            <a href="https://time.com/6142743/joe-biden-supreme-court-nominee-black-woman-campaign-promise/">Pressure Mounts for Biden to Nominate a Black Woman to the Supreme</a>
+            <span>January 26, 2022 • 3:51 PM EST</span>
+        </div>
+        <div class="story-item">
+            <a href="https://time.com/6142769/james-webb-space-telescope-reaches-l2/">The James Webb Space Telescope Is in Position—And Now We Wait</a>
+            <span>January 26, 2022 • 3:46 PM EST</span>
+        </div>
+        <div class="story-item">
+            <a href="https://time.com/6142718/we-need-new-national-covid-19-response-plan/">We Urgently Need a New National COVID-19 Response Plan</a>
+            <span>January 26, 2022 • 3:13 PM EST</span>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
